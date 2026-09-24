@@ -1,0 +1,12 @@
+{
+  "name": "nuclicalc",
+  "version": "1.0.0",
+  "private": true,
+  "description": "PWA zur Berechnung radioaktiver Zerfallsreihen",
+  "scripts": {
+    "test": "node tests/decay.test.js",
+    "import-iaea": "node scripts/import_iaea.js",
+    "icons": "node scripts/make_icons.js"
+  },
+  "license": "MIT"
+}
