@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Zerfallsrechner</title>
+  <meta name="description" content="Berechnung radioaktiver Zerfallsreihen: Bestand und Aktivität aller Tochternuklide, offline nutzbar.">
+  <meta name="theme-color" content="#2a78d6" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#1a1a19" media="(prefers-color-scheme: dark)">
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="Zerfall">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="topbar">
+    <img class="logo" src="icons/icon.svg" alt="" width="28" height="28">
+    <h1>Zerfallsrechner</h1>
+    <span id="offline" class="badge" hidden>offline</span>
+  </header>
+
+  <main>
+    <form id="form" novalidate>
+      <section class="card">
+        <h2>Ausgangsgemisch</h2>
+        <div id="rows" class="rows"></div>
+        <button type="button" id="add" class="btn ghost">+ Nuklid hinzufügen</button>
+        <details class="presets">
+          <summary>Beispiele</summary>
+          <div class="chips" id="presets"></div>
+        </details>
+      </section>
+
+      <section class="card">
+        <h2>Zeit</h2>
+        <label class="field">
+          <span>Zeitpunkt für die Tabelle</span>
+          <span class="inline">
+            <input id="t" type="text" inputmode="decimal" value="1" aria-label="Zeitpunkt">
+            <select id="tUnit" aria-label="Einheit des Zeitpunkts"></select>
+          </span>
+        </label>
+        <fieldset class="field">
+          <legend>Zeitbereich für das Diagramm</legend>
+          <label class="check"><input type="checkbox" id="autoRange" checked> automatisch</label>
+          <div class="range" id="rangeFields">
+            <span class="inline">
+              <input id="t1" type="text" inputmode="decimal" value="1" aria-label="von">
+              <select id="t1Unit" aria-label="Einheit von"></select>
+            </span>
+            <span class="dash">bis</span>
+            <span class="inline">
+              <input id="t2" type="text" inputmode="decimal" value="100" aria-label="bis">
+              <select id="t2Unit" aria-label="Einheit bis"></select>
+            </span>
+          </div>
+        </fieldset>
+      </section>
+
+      <div class="actions">
+        <button type="submit" class="btn primary" id="calc">Berechnen</button>
+      </div>
+      <p id="error" class="error" role="alert" hidden></p>
+    </form>
+
+    <section class="card" id="resultCard" hidden>
+      <h2>Ergebnis</h2>
+      <p id="summary" class="summary"></p>
+      <label class="check"><input type="checkbox" id="showStable" checked> stabile Nuklide anzeigen</label>
+      <div class="table-wrap">
+        <table id="table">
+          <thead>
+            <tr>
+              <th scope="col">Nuklid</th>
+              <th scope="col" class="num">T½</th>
+              <th scope="col" class="num">Atome</th>
+              <th scope="col" class="num">Masse</th>
+              <th scope="col" class="num">Aktivität</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+      <p id="warnings" class="hint"></p>
+    </section>
+
+    <section class="card" id="chartCard" hidden>
+      <h2>Zeitverlauf</h2>
+      <div class="toolbar">
+        <div class="segmented" role="radiogroup" aria-label="Größe">
+          <label><input type="radio" name="qty" value="activity" checked><span>Aktivität</span></label>
+          <label><input type="radio" name="qty" value="atoms"><span>Atome</span></label>
+          <label><input type="radio" name="qty" value="mass"><span>Masse</span></label>
+        </div>
+        <label class="check"><input type="checkbox" id="logY" checked> y logarithmisch</label>
+      </div>
+      <div class="chart-box" id="chartBox">
+        <canvas id="chart" role="img" aria-label="Zeitverlauf der Nuklide"></canvas>
+        <div id="tooltip" class="tooltip" hidden></div>
+      </div>
+      <div id="legend" class="legend" aria-label="Legende (Tippen blendet aus)"></div>
+      <p class="hint">Tippen oder Ziehen im Diagramm zeigt die Werte. Tippen auf einen Legendeneintrag blendet ihn aus.</p>
+    </section>
+
+    <footer class="foot">
+      <p>Daten: <span id="dataSource"></span></p>
+      <p>Rechenweg: N(t) = exp(A·t)·N(0), Matrixexponential per Padé-Näherung mit Skalierung und Quadrieren. Keine Gewähr.</p>
+    </footer>
+  </main>
+
+  <datalist id="nuclideList"></datalist>
+
+  <script src="js/decay.js"></script>
+  <script src="js/format.js"></script>
+  <script src="js/chart.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
