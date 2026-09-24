@@ -180,10 +180,10 @@ if (fs.existsSync(dbPath)) {
     });
   }
 
-  test('U-238: säkulares Gleichgewicht nach 2 Mio. Jahren, Mutter halbiert nach T½', () => {
+  test('U-238: säkulares Gleichgewicht nach 10 Mio. Jahren, Mutter halbiert nach T½', () => {
     const T = db['U-238'].halfLife;
-    const r = Decay.computeMixture(db, [{ nuclide: 'U-238', atoms: 1e24 }], [2e6 * Y, T]);
-    const { activity, N } = r.results[0];
+    const r = Decay.computeMixture(db, [{ nuclide: 'U-238', atoms: 1e24 }], [1e7 * Y, T]);
+    const { activity } = r.results[0];
     const aU = activity[r.order.indexOf('U-238')];
     for (const n of ['Th-234', 'U-234', 'Th-230', 'Ra-226', 'Rn-222', 'Pb-210', 'Po-210']) {
       close(activity[r.order.indexOf(n)], aU, 1e-3, n + ' / U-238');
@@ -191,7 +191,7 @@ if (fs.existsSync(dbPath)) {
     // Po-214 wird zu 99,979 % über Bi-214 gespeist
     close(activity[r.order.indexOf('Po-214')], aU * db['Bi-214'].decays.find((d) => d.daughter === 'Po-214').branch, 2e-3, 'Po-214');
     close(r.results[1].N[r.order.indexOf('U-238')], 5e23, 1e-10, 'U-238 nach T½');
-    if (!(N[r.order.indexOf('Po-212')] === undefined)) throw new Error('Po-212 gehört nicht zur U-238-Reihe');
+    if (r.order.includes('Po-212')) throw new Error('Po-212 gehört nicht zur U-238-Reihe');
   });
 }
 

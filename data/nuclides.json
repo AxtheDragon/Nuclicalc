@@ -1,0 +1,693 @@
+{
+ "meta": {
+  "description": "Startdatensatz: vier natürliche Zerfallsreihen und häufige Einzelnuklide",
+  "source": "Halbwertszeiten und Verzweigungen nach NUBASE2020/ENSDF (gerundet), Atommassen nach AME2020 (gerundet); von Hand erfasst, nicht amtlich geprüft",
+  "units": {
+   "halfLife": "s",
+   "mass": "u"
+  },
+  "year": "1 a = 365,25 d"
+ },
+ "nuclides": {
+  "U-238": {
+   "halfLife": 140999356800000000,
+   "stable": false,
+   "mass": 238.050788,
+   "decays": [
+    {"mode": "A", "branch": 1, "daughter": "Th-234"}
+   ]
+  },
+  "Th-234": {
+   "halfLife": 2082240,
+   "stable": false,
+   "mass": 234.043601,
+   "decays": [
+    {"mode": "B-", "branch": 1, "daughter": "Pa-234m"}
+   ]
+  },
+  "Pa-234m": {
+   "halfLife": 69.54,
+   "stable": false,
+   "mass": 234.043308,
+   "decays": [
+    {"mode": "B-", "branch": 0.9984, "daughter": "U-234"},
+    {"mode": "IT", "branch": 0.0016, "daughter": "Pa-234"}
+   ]
+  },
+  "Pa-234": {
+   "halfLife": 24120,
+   "stable": false,
+   "mass": 234.043308,
+   "decays": [
+    {"mode": "B-", "branch": 1, "daughter": "U-234"}
+   ]
+  },
+  "U-234": {
+   "halfLife": 7747390800000,
+   "stable": false,
+   "mass": 234.040952,
+   "decays": [
+    {"mode": "A", "branch": 1, "daughter": "Th-230"}
+   ]
+  },
+  "Th-230": {
+   "halfLife": 2378811888000,
+   "stable": false,
+   "mass": 230.033134,
+   "decays": [
+    {"mode": "A", "branch": 1, "daughter": "Ra-226"}
+   ]
+  },
+  "Ra-226": {
+   "halfLife": 50492160000,
+   "stable": false,
+   "mass": 226.02541,
+   "decays": [
+    {"mode": "A", "branch": 1, "daughter": "Rn-222"}
+   ]
+  },
+  "Rn-222": {
+   "halfLife": 330350.4,
+   "stable": false,
+   "mass": 222.017578,
+   "decays": [
+    {"mode": "A", "branch": 1, "daughter": "Po-218"}
+   ]
+  },
+  "Po-218": {
+   "halfLife": 185.88,
+   "stable": false,
+   "mass": 218.008973,
+   "decays": [
+    {"mode": "A", "branch": 0.9998, "daughter": "Pb-214"},
+    {"mode": "B-", "branch": 0.0002, "daughter": "At-218"}
+   ]
+  },
+  "At-218": {
+   "halfLife": 1.5,
+   "stable": false,
+   "mass": 218.008695,
+   "decays": [
+    {"mode": "A", "branch": 0.999, "daughter": "Bi-214"},
+    {"mode": "B-", "branch": 0.001, "daughter": "Rn-218"}
+   ]
+  },
+  "Rn-218": {
+   "halfLife": 0.035,
+   "stable": false,
+   "mass": 218.005604,
+   "decays": [
+    {"mode": "A", "branch": 1, "daughter": "Po-214"}
+   ]
+  },
+  "Pb-214": {
+   "halfLife": 1608,
+   "stable": false,
+   "mass": 213.999806,
+   "decays": [
+    {"mode": "B-", "branch": 1, "daughter": "Bi-214"}
+   ]
+  },
+  "Bi-214": {
+   "halfLife": 1194,
+   "stable": false,
+   "mass": 213.998712,
+   "decays": [
+    {"mode": "B-", "branch": 0.99979, "daughter": "Po-214"},
+    {"mode": "A", "branch": 0.00021, "daughter": "Tl-210"}
+   ]
+  },
+  "Po-214": {
+   "halfLife": 0.0001643,
+   "stable": false,
+   "mass": 213.995201,
+   "decays": [
+    {"mode": "A", "branch": 1, "daughter": "Pb-210"}
+   ]
+  },
+  "Tl-210": {
+   "halfLife": 78,
+   "stable": false,
+   "mass": 209.990074,
+   "decays": [
+    {"mode": "B-", "branch": 1, "daughter": "Pb-210"}
+   ]
+  },
+  "Pb-210": {
+   "halfLife": 700578720,
+   "stable": false,
+   "mass": 209.984189,
+   "decays": [
+    {"mode": "B-", "branch": 0.999999981, "daughter": "Bi-210"},
+    {"mode": "A", "branch": 1.9e-8, "daughter": "Hg-206"}
+   ]
+  },
+  "Bi-210": {
+   "halfLife": 433036.8,
+   "stable": false,
+   "mass": 209.984121,
+   "decays": [
+    {"mode": "B-", "branch": 0.99999868, "daughter": "Po-210"},
+    {"mode": "A", "branch": 0.00000132, "daughter": "Tl-206"}
+   ]
+  },
+  "Po-210": {
+   "halfLife": 11955686.4,
+   "stable": false,
+   "mass": 209.982874,
+   "decays": [
+    {"mode": "A", "branch": 1, "daughter": "Pb-206"}
+   ]
+  },
+  "Hg-206": {
+   "halfLife": 499.2,
+   "stable": false,
+   "mass": 205.977514,
+   "decays": [
+    {"mode": "B-", "branch": 1, "daughter": "Tl-206"}
+   ]
+  },
+  "Tl-206": {
+   "halfLife": 252.12,
+   "stable": false,
+   "mass": 205.97611,
+   "decays": [
+    {"mode": "B-", "branch": 1, "daughter": "Pb-206"}
+   ]
+  },
+  "Pb-206": {
+   "halfLife": null,
+   "stable": true,
+   "mass": 205.974465,
+   "decays": []
+  },
+  "U-235": {
+   "halfLife": 22216550400000000,
+   "stable": false,
+   "mass": 235.04393,
+   "decays": [
+    {"mode": "A", "branch": 1, "daughter": "Th-231"}
+   ]
+  },
+  "Th-231": {
+   "halfLife": 91872,
+   "stable": false,
+   "mass": 231.036304,
+   "decays": [
+    {"mode": "B-", "branch": 1, "daughter": "Pa-231"}
+   ]
+  },
+  "Pa-231": {
+   "halfLife": 1033826976000,
+   "stable": false,
+   "mass": 231.035884,
+   "decays": [
+    {"mode": "A", "branch": 1, "daughter": "Ac-227"}
+   ]
+  },
+  "Ac-227": {
+   "halfLife": 687072067.2,
+   "stable": false,
+   "mass": 227.027752,
+   "decays": [
+    {"mode": "B-", "branch": 0.9862, "daughter": "Th-227"},
+    {"mode": "A", "branch": 0.0138, "daughter": "Fr-223"}
+   ]
+  },
+  "Th-227": {
+   "halfLife": 1615420.8,
+   "stable": false,
+   "mass": 227.027704,
+   "decays": [
+    {"mode": "A", "branch": 1, "daughter": "Ra-223"}
+   ]
+  },
+  "Fr-223": {
+   "halfLife": 1320,
+   "stable": false,
+   "mass": 223.019736,
+   "decays": [
+    {"mode": "B-", "branch": 0.99994, "daughter": "Ra-223"},
+    {"mode": "A", "branch": 0.00006, "daughter": "At-219"}
+   ]
+  },
+  "At-219": {
+   "halfLife": 56,
+   "stable": false,
+   "mass": 219.011162,
+   "decays": [
+    {"mode": "A", "branch": 0.97, "daughter": "Bi-215"},
+    {"mode": "B-", "branch": 0.03, "daughter": "Rn-219"}
+   ]
+  },
+  "Bi-215": {
+   "halfLife": 456,
+   "stable": false,
+   "mass": 215.001749,
+   "decays": [
+    {"mode": "B-", "branch": 1, "daughter": "Po-215"}
+   ]
+  },
+  "Ra-223": {
+   "halfLife": 987552,
+   "stable": false,
+   "mass": 223.018502,
+   "decays": [
+    {"mode": "A", "branch": 1, "daughter": "Rn-219"}
+   ]
+  },
+  "Rn-219": {
+   "halfLife": 3.96,
+   "stable": false,
+   "mass": 219.00948,
+   "decays": [
+    {"mode": "A", "branch": 1, "daughter": "Po-215"}
+   ]
+  },
+  "Po-215": {
+   "halfLife": 0.001781,
+   "stable": false,
+   "mass": 214.99942,
+   "decays": [
+    {"mode": "A", "branch": 0.9999977, "daughter": "Pb-211"},
+    {"mode": "B-", "branch": 0.0000023, "daughter": "At-215"}
+   ]
+  },
+  "At-215": {
+   "halfLife": 0.0001,
+   "stable": false,
+   "mass": 214.998653,
+   "decays": [
+    {"mode": "A", "branch": 1, "daughter": "Bi-211"}
+   ]
+  },
+  "Pb-211": {
+   "halfLife": 2166,
+   "stable": false,
+   "mass": 210.988737,
+   "decays": [
+    {"mode": "B-", "branch": 1, "daughter": "Bi-211"}
+   ]
+  },
+  "Bi-211": {
+   "halfLife": 128.4,
+   "stable": false,
+   "mass": 210.987269,
+   "decays": [
+    {"mode": "A", "branch": 0.99724, "daughter": "Tl-207"},
+    {"mode": "B-", "branch": 0.00276, "daughter": "Po-211"}
+   ]
+  },
+  "Po-211": {
+   "halfLife": 0.516,
+   "stable": false,
+   "mass": 210.986653,
+   "decays": [
+    {"mode": "A", "branch": 1, "daughter": "Pb-207"}
+   ]
+  },
+  "Tl-207": {
+   "halfLife": 286.2,
+   "stable": false,
+   "mass": 206.977419,
+   "decays": [
+    {"mode": "B-", "branch": 1, "daughter": "Pb-207"}
+   ]
+  },
+  "Pb-207": {
+   "halfLife": null,
+   "stable": true,
+   "mass": 206.975897,
+   "decays": []
+  },
+  "Th-232": {
+   "halfLife": 441806400000000000,
+   "stable": false,
+   "mass": 232.038056,
+   "decays": [
+    {"mode": "A", "branch": 1, "daughter": "Ra-228"}
+   ]
+  },
+  "Ra-228": {
+   "halfLife": 181456200,
+   "stable": false,
+   "mass": 228.03107,
+   "decays": [
+    {"mode": "B-", "branch": 1, "daughter": "Ac-228"}
+   ]
+  },
+  "Ac-228": {
+   "halfLife": 22140,
+   "stable": false,
+   "mass": 228.031021,
+   "decays": [
+    {"mode": "B-", "branch": 1, "daughter": "Th-228"}
+   ]
+  },
+  "Th-228": {
+   "halfLife": 60325508.16,
+   "stable": false,
+   "mass": 228.028741,
+   "decays": [
+    {"mode": "A", "branch": 1, "daughter": "Ra-224"}
+   ]
+  },
+  "Ra-224": {
+   "halfLife": 313796.16,
+   "stable": false,
+   "mass": 224.020212,
+   "decays": [
+    {"mode": "A", "branch": 1, "daughter": "Rn-220"}
+   ]
+  },
+  "Rn-220": {
+   "halfLife": 55.6,
+   "stable": false,
+   "mass": 220.011394,
+   "decays": [
+    {"mode": "A", "branch": 1, "daughter": "Po-216"}
+   ]
+  },
+  "Po-216": {
+   "halfLife": 0.145,
+   "stable": false,
+   "mass": 216.001915,
+   "decays": [
+    {"mode": "A", "branch": 1, "daughter": "Pb-212"}
+   ]
+  },
+  "Pb-212": {
+   "halfLife": 38304,
+   "stable": false,
+   "mass": 211.991898,
+   "decays": [
+    {"mode": "B-", "branch": 1, "daughter": "Bi-212"}
+   ]
+  },
+  "Bi-212": {
+   "halfLife": 3633,
+   "stable": false,
+   "mass": 211.991286,
+   "decays": [
+    {"mode": "B-", "branch": 0.6406, "daughter": "Po-212"},
+    {"mode": "A", "branch": 0.3594, "daughter": "Tl-208"}
+   ]
+  },
+  "Po-212": {
+   "halfLife": 2.99e-7,
+   "stable": false,
+   "mass": 211.988868,
+   "decays": [
+    {"mode": "A", "branch": 1, "daughter": "Pb-208"}
+   ]
+  },
+  "Tl-208": {
+   "halfLife": 183.18,
+   "stable": false,
+   "mass": 207.982018,
+   "decays": [
+    {"mode": "B-", "branch": 1, "daughter": "Pb-208"}
+   ]
+  },
+  "Pb-208": {
+   "halfLife": null,
+   "stable": true,
+   "mass": 207.976652,
+   "decays": []
+  },
+  "Np-237": {
+   "halfLife": 67659494400000,
+   "stable": false,
+   "mass": 237.048173,
+   "decays": [
+    {"mode": "A", "branch": 1, "daughter": "Pa-233"}
+   ]
+  },
+  "Pa-233": {
+   "halfLife": 2330640,
+   "stable": false,
+   "mass": 233.040247,
+   "decays": [
+    {"mode": "B-", "branch": 1, "daughter": "U-233"}
+   ]
+  },
+  "U-233": {
+   "halfLife": 5023969920000,
+   "stable": false,
+   "mass": 233.039635,
+   "decays": [
+    {"mode": "A", "branch": 1, "daughter": "Th-229"}
+   ]
+  },
+  "Th-229": {
+   "halfLife": 250314883200,
+   "stable": false,
+   "mass": 229.031762,
+   "decays": [
+    {"mode": "A", "branch": 1, "daughter": "Ra-225"}
+   ]
+  },
+  "Ra-225": {
+   "halfLife": 1287360,
+   "stable": false,
+   "mass": 225.023612,
+   "decays": [
+    {"mode": "B-", "branch": 1, "daughter": "Ac-225"}
+   ]
+  },
+  "Ac-225": {
+   "halfLife": 857001.6,
+   "stable": false,
+   "mass": 225.02323,
+   "decays": [
+    {"mode": "A", "branch": 1, "daughter": "Fr-221"}
+   ]
+  },
+  "Fr-221": {
+   "halfLife": 286.1,
+   "stable": false,
+   "mass": 221.014255,
+   "decays": [
+    {"mode": "A", "branch": 1, "daughter": "At-217"}
+   ]
+  },
+  "At-217": {
+   "halfLife": 0.0323,
+   "stable": false,
+   "mass": 217.004719,
+   "decays": [
+    {"mode": "A", "branch": 0.99988, "daughter": "Bi-213"},
+    {"mode": "B-", "branch": 0.00012, "daughter": "Rn-217"}
+   ]
+  },
+  "Rn-217": {
+   "halfLife": 0.00054,
+   "stable": false,
+   "mass": 217.003928,
+   "decays": [
+    {"mode": "A", "branch": 1, "daughter": "Po-213"}
+   ]
+  },
+  "Bi-213": {
+   "halfLife": 2735.4,
+   "stable": false,
+   "mass": 212.994385,
+   "decays": [
+    {"mode": "B-", "branch": 0.9791, "daughter": "Po-213"},
+    {"mode": "A", "branch": 0.0209, "daughter": "Tl-209"}
+   ]
+  },
+  "Po-213": {
+   "halfLife": 0.000003708,
+   "stable": false,
+   "mass": 212.992857,
+   "decays": [
+    {"mode": "A", "branch": 1, "daughter": "Pb-209"}
+   ]
+  },
+  "Tl-209": {
+   "halfLife": 129.72,
+   "stable": false,
+   "mass": 208.985359,
+   "decays": [
+    {"mode": "B-", "branch": 1, "daughter": "Pb-209"}
+   ]
+  },
+  "Pb-209": {
+   "halfLife": 11642.4,
+   "stable": false,
+   "mass": 208.98109,
+   "decays": [
+    {"mode": "B-", "branch": 1, "daughter": "Bi-209"}
+   ]
+  },
+  "Bi-209": {
+   "halfLife": 6.3430776e+26,
+   "stable": false,
+   "mass": 208.980399,
+   "decays": [
+    {"mode": "A", "branch": 1, "daughter": "Tl-205"}
+   ]
+  },
+  "Tl-205": {
+   "halfLife": null,
+   "stable": true,
+   "mass": 204.974428,
+   "decays": []
+  },
+  "Cs-137": {
+   "halfLife": 949252608,
+   "stable": false,
+   "mass": 136.90709,
+   "decays": [
+    {"mode": "B-", "branch": 0.947, "daughter": "Ba-137m"},
+    {"mode": "B-", "branch": 0.053, "daughter": "Ba-137"}
+   ]
+  },
+  "Ba-137m": {
+   "halfLife": 153.12,
+   "stable": false,
+   "mass": 136.905827,
+   "decays": [
+    {"mode": "IT", "branch": 1, "daughter": "Ba-137"}
+   ]
+  },
+  "Ba-137": {
+   "halfLife": null,
+   "stable": true,
+   "mass": 136.905827,
+   "decays": []
+  },
+  "Sr-90": {
+   "halfLife": 908543304,
+   "stable": false,
+   "mass": 89.907728,
+   "decays": [
+    {"mode": "B-", "branch": 1, "daughter": "Y-90"}
+   ]
+  },
+  "Y-90": {
+   "halfLife": 230580,
+   "stable": false,
+   "mass": 89.907144,
+   "decays": [
+    {"mode": "B-", "branch": 1, "daughter": "Zr-90"}
+   ]
+  },
+  "Zr-90": {
+   "halfLife": null,
+   "stable": true,
+   "mass": 89.904698,
+   "decays": []
+  },
+  "I-131": {
+   "halfLife": 693377.28,
+   "stable": false,
+   "mass": 130.906126,
+   "decays": [
+    {"mode": "B-", "branch": 1, "daughter": "Xe-131"}
+   ]
+  },
+  "Xe-131": {
+   "halfLife": null,
+   "stable": true,
+   "mass": 130.905084,
+   "decays": []
+  },
+  "Co-60": {
+   "halfLife": 166352732.6,
+   "stable": false,
+   "mass": 59.933816,
+   "decays": [
+    {"mode": "B-", "branch": 1, "daughter": "Ni-60"}
+   ]
+  },
+  "Ni-60": {
+   "halfLife": null,
+   "stable": true,
+   "mass": 59.930786,
+   "decays": []
+  },
+  "Mo-99": {
+   "halfLife": 237513.6,
+   "stable": false,
+   "mass": 98.907709,
+   "decays": [
+    {"mode": "B-", "branch": 0.876, "daughter": "Tc-99m"},
+    {"mode": "B-", "branch": 0.124, "daughter": "Tc-99"}
+   ]
+  },
+  "Tc-99m": {
+   "halfLife": 21624.12,
+   "stable": false,
+   "mass": 98.906251,
+   "decays": [
+    {"mode": "IT", "branch": 0.999963, "daughter": "Tc-99"},
+    {"mode": "B-", "branch": 0.000037, "daughter": "Ru-99"}
+   ]
+  },
+  "Tc-99": {
+   "halfLife": 6661809360000,
+   "stable": false,
+   "mass": 98.906251,
+   "decays": [
+    {"mode": "B-", "branch": 1, "daughter": "Ru-99"}
+   ]
+  },
+  "Ru-99": {
+   "halfLife": null,
+   "stable": true,
+   "mass": 98.905934,
+   "decays": []
+  },
+  "K-40": {
+   "halfLife": 39383884800000000,
+   "stable": false,
+   "mass": 39.963998,
+   "decays": [
+    {"mode": "B-", "branch": 0.8928, "daughter": "Ca-40"},
+    {"mode": "EC", "branch": 0.1072, "daughter": "Ar-40"}
+   ]
+  },
+  "Ca-40": {
+   "halfLife": null,
+   "stable": true,
+   "mass": 39.962591,
+   "decays": []
+  },
+  "Ar-40": {
+   "halfLife": null,
+   "stable": true,
+   "mass": 39.962383,
+   "decays": []
+  },
+  "C-14": {
+   "halfLife": 179878320000,
+   "stable": false,
+   "mass": 14.003242,
+   "decays": [
+    {"mode": "B-", "branch": 1, "daughter": "N-14"}
+   ]
+  },
+  "N-14": {
+   "halfLife": null,
+   "stable": true,
+   "mass": 14.003074,
+   "decays": []
+  },
+  "H-3": {
+   "halfLife": 388789632,
+   "stable": false,
+   "mass": 3.016049,
+   "decays": [
+    {"mode": "B-", "branch": 1, "daughter": "He-3"}
+   ]
+  },
+  "He-3": {
+   "halfLife": null,
+   "stable": true,
+   "mass": 3.016029,
+   "decays": []
+  }
+ }
+}
