@@ -1,4 +1,4 @@
 node_modules/
-*.csv
-!data/*.csv
+# heruntergeladene LiveChart-CSV nicht einchecken
+/*.csv
 .DS_Store
